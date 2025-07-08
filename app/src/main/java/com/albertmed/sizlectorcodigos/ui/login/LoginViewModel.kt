@@ -22,7 +22,13 @@ class LoginViewModel(private val userRepository: UserRepository) : ViewModel() {
             try {
                 val response = userRepository.login(empID, password)
                 if (response.isSuccessful) {
-                    _loginResult.postValue(Result.success(response.body()!!))
+                    val envelope = response.body()
+                    val loginResponse = envelope?.data
+                    if (loginResponse != null) {
+                        _loginResult.postValue(Result.success(loginResponse))
+                    } else {
+                        _loginResult.postValue(Result.failure(Throwable("Respuesta inválida")))
+                    }
                 } else {
                     _loginResult.postValue(Result.failure(Throwable("Unauthorized")))
                 }

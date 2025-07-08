@@ -12,6 +12,7 @@ class MainViewModel(private val userRepository: UserRepository) : ViewModel() {
 
     val userName: LiveData<String?> = userRepository.getUserName().asLiveData()
     val userId: LiveData<String?> = userRepository.getUserId().asLiveData()
+    val userDepartment: LiveData<String?> = userRepository.getUserDepartment().asLiveData()
 
     fun logout() {
         CoroutineScope(Dispatchers.IO).launch {

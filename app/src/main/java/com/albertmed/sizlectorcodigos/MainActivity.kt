@@ -61,10 +61,15 @@ class MainActivity : AppCompatActivity() {
     private fun setupObservers() {
         val headerView = binding.navView.getHeaderView(0)
         val navHeaderName: TextView = headerView.findViewById(R.id.nav_header_name)
+        val navHeaderDepartment: TextView = headerView.findViewById(R.id.nav_header_department)
 
         mainViewModel.userName.observe(this) { name ->
             navHeaderName.text = if (name != null) "Hola, $name" else "Invitado"
             updateMenuVisibility(name != null)
+        }
+        mainViewModel.userDepartment.observe(this) { department ->
+            navHeaderDepartment.text = department ?: "Departamento"
+            navHeaderDepartment.visibility = if (department.isNullOrBlank()) View.GONE else View.VISIBLE
         }
     }
 

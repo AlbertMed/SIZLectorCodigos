@@ -72,7 +72,7 @@ class LoginFragment : Fragment() {
 
         viewModel.loginResult.observe(viewLifecycleOwner) { result ->
             result.onSuccess { loginResponse ->
-                Toast.makeText(context, "Bienvenido, ${loginResponse.nombre}", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "Bienvenido, ${loginResponse.name}", Toast.LENGTH_LONG).show()
                 findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
             }.onFailure {
                 Toast.makeText(context, "Error de autenticación", Toast.LENGTH_SHORT).show()

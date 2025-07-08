@@ -18,12 +18,14 @@ class SessionManager(context: Context) {
     companion object {
         val USER_ID_KEY = stringPreferencesKey("user_id")
         val USER_NAME_KEY = stringPreferencesKey("user_name")
+        val USER_DEPARTMENT_KEY = stringPreferencesKey("user_department")
     }
 
-    suspend fun saveSession(userId: String, userName: String) {
+    suspend fun saveSession(userId: String, userName: String, userDepartment: String) {
         dataStore.edit { preferences ->
             preferences[USER_ID_KEY] = userId
             preferences[USER_NAME_KEY] = userName
+            preferences[USER_DEPARTMENT_KEY] = userDepartment
         }
     }
 
@@ -39,5 +41,9 @@ class SessionManager(context: Context) {
 
     val userNameFlow: Flow<String?> = dataStore.data.map { preferences ->
         preferences[USER_NAME_KEY]
+    }
+
+    val userDepartmentFlow: Flow<String?> = dataStore.data.map { preferences ->
+        preferences[USER_DEPARTMENT_KEY]
     }
 } 

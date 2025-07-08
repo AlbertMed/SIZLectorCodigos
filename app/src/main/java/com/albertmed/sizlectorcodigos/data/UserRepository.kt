@@ -3,6 +3,7 @@ package com.albertmed.sizlectorcodigos.data
 import com.albertmed.sizlectorcodigos.data.datastore.SessionManager
 import com.albertmed.sizlectorcodigos.data.model.LoginRequest
 import com.albertmed.sizlectorcodigos.data.model.LoginResponse
+import com.albertmed.sizlectorcodigos.data.model.LoginEnvelope
 import com.albertmed.sizlectorcodigos.data.model.SaveScanRequest
 import com.albertmed.sizlectorcodigos.data.model.ScanData
 import com.albertmed.sizlectorcodigos.data.network.ApiService
@@ -18,13 +19,14 @@ class UserRepository(
     private val sessionManager: SessionManager
 ) {
 
-    suspend fun login(empID: String, password: String): Response<LoginResponse> {
+    suspend fun login(empID: String, password: String): Response<LoginEnvelope> {
         val request = LoginRequest(empID, password)
         val response = apiService.login(request)
         if (response.isSuccessful) {
-            val user = response.body()
+            val envelope = response.body()
+            val user = envelope?.data
             if (user != null) {
-                sessionManager.saveSession(empID, user.nombre)
+                sessionManager.saveSession(empID, user.name, user.departamento)
             }
         }
         return response
@@ -49,5 +51,6 @@ class UserRepository(
 
     fun getUserId(): Flow<String?> = sessionManager.userIdFlow
     fun getUserName(): Flow<String?> = sessionManager.userNameFlow
+    fun getUserDepartment(): Flow<String?> = sessionManager.userDepartmentFlow
 
 } 
