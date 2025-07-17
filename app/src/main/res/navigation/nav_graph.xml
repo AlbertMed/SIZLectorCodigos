@@ -24,6 +24,42 @@
     </fragment>
 
     <fragment
+        android:id="@+id/nav_nueva_inspeccion"
+        android:name="com.albertmed.sizlectorcodigos.ui.inspeccion.NuevaInspeccionFragment"
+        android:label="Nueva Inspección"
+        tools:layout="@layout/fragment_nueva_inspeccion">
+        <action
+            android:id="@+id/action_nuevaInspeccionFragment_to_materialesInspeccionFragment"
+            app:destination="@id/materialesInspeccionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/materialesInspeccionFragment"
+        android:name="com.albertmed.sizlectorcodigos.ui.inspeccion.MaterialesInspeccionFragment"
+        android:label="Materiales a Inspeccionar"
+        tools:layout="@layout/fragment_materiales_inspeccion">
+        <argument
+            android:name="codigoEscaneado"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_materialesInspeccionFragment_to_inspeccionMaterialFragment"
+            app:destination="@id/inspeccionMaterialFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inspeccionMaterialFragment"
+        android:name="com.albertmed.sizlectorcodigos.ui.inspeccion.InspeccionMaterialFragment"
+        android:label="Inspección de Material"
+        tools:layout="@layout/fragment_inspeccion_material">
+        <argument
+            android:name="descripcionMaterial"
+            app:argType="string" />
+        <argument
+            android:name="proveedor"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
         android:id="@+id/nav_scanner"
         android:name="com.albertmed.sizlectorcodigos.ui.scanner.ScannerFragment"
         android:label="Escanear Código"

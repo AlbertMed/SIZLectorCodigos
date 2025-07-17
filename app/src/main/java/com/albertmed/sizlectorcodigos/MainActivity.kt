@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.homeFragment, R.id.nav_scanner
+                R.id.homeFragment, R.id.nav_nueva_inspeccion
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -76,6 +76,7 @@ class MainActivity : AppCompatActivity() {
     private fun updateMenuVisibility(isLoggedIn: Boolean) {
         val menu = binding.navView.menu
         menu.findItem(R.id.nav_home).isVisible = isLoggedIn
+        menu.findItem(R.id.nav_nueva_inspeccion).isVisible = isLoggedIn
         menu.findItem(R.id.nav_logout).isVisible = isLoggedIn
         menu.findItem(R.id.nav_login).isVisible = !isLoggedIn
     }

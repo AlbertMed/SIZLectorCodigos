@@ -7,6 +7,7 @@ import com.albertmed.sizlectorcodigos.ui.login.LoginViewModel
 import com.albertmed.sizlectorcodigos.ui.main.MainViewModel
 import com.albertmed.sizlectorcodigos.ui.scanner.ScanResultViewModel
 import com.albertmed.sizlectorcodigos.ui.home.HomeViewModel
+import com.albertmed.sizlectorcodigos.ui.inspeccion.NuevaInspeccionViewModel
 
 class ViewModelFactory(private val repository: UserRepository) : ViewModelProvider.Factory {
 
@@ -23,6 +24,9 @@ class ViewModelFactory(private val repository: UserRepository) : ViewModelProvid
             }
             modelClass.isAssignableFrom(HomeViewModel::class.java) -> {
                 HomeViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(NuevaInspeccionViewModel::class.java) -> {
+                NuevaInspeccionViewModel() as T
             }
             else -> throw IllegalArgumentException("Unknown ViewModel class: ${modelClass.name}")
         }

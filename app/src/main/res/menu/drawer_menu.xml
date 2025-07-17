@@ -6,9 +6,9 @@
             android:icon="@drawable/ic_home"
             android:title="Inicio" />
         <item
-            android:id="@+id/nav_scanner"
-            android:icon="@drawable/ic_scanner"
-            android:title="Escanear Código" />
+            android:id="@+id/nav_nueva_inspeccion"
+            android:icon="@drawable/ic_inspection"
+            android:title="Nueva Inspección" />
     </group>
 
     <item android:title="Cuenta">
