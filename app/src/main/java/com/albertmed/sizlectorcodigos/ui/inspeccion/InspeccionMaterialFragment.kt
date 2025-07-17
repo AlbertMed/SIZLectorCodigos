@@ -76,6 +76,11 @@ class InspeccionMaterialFragment : Fragment() {
             },
             onEvidenciaFotoClick = { item ->
                 // TODO: lógica para tomar foto para este rubro
+                // Aquí deberías lanzar la intención de cámara y guardar la foto en item.fotoUri
+            },
+            onEliminarFotoClick = { item ->
+                item.fotoUri = null
+                checklistAdapter.notifyItemChanged(checklistAdapter.currentList.indexOf(item))
             },
             getCantidadMaxima = { it.cantidadMaxima }
         )

@@ -11,7 +11,8 @@ data class ItemChecklist(
     val nombre: String,
     var estado: EstadoInspeccion = EstadoInspeccion.NO_APLICA,
     var observacion: String = "",
-    val cantidadMaxima: Double = 0.0
+    val cantidadMaxima: Double = 0.0,
+    var fotoUri: String? = null // URI de la foto de evidencia
 )
 
 data class InspeccionMaterial(

@@ -19,6 +19,7 @@ class ChecklistInspeccionAdapter(
     private val onEstadoChanged: (ItemChecklist, EstadoInspeccion) -> Unit,
     private val onNotaVozClick: (ItemChecklist) -> Unit,
     private val onEvidenciaFotoClick: (ItemChecklist) -> Unit,
+    private val onEliminarFotoClick: (ItemChecklist) -> Unit,
     private val getCantidadMaxima: (ItemChecklist) -> Double = { 100.0 } // Por defecto 100, puedes personalizarlo
 ) : ListAdapter<ItemChecklist, ChecklistInspeccionAdapter.ChecklistViewHolder>(ChecklistDiffCallback()) {
 
@@ -26,7 +27,7 @@ class ChecklistInspeccionAdapter(
         val binding = ItemChecklistInspeccionBinding.inflate(
             LayoutInflater.from(parent.context), parent, false
         )
-        return ChecklistViewHolder(binding, onEstadoChanged, onNotaVozClick, onEvidenciaFotoClick, getCantidadMaxima)
+        return ChecklistViewHolder(binding, onEstadoChanged, onNotaVozClick, onEvidenciaFotoClick, onEliminarFotoClick, getCantidadMaxima)
     }
 
     override fun onBindViewHolder(holder: ChecklistViewHolder, position: Int) {
@@ -38,6 +39,7 @@ class ChecklistInspeccionAdapter(
         private val onEstadoChanged: (ItemChecklist, EstadoInspeccion) -> Unit,
         private val onNotaVozClick: (ItemChecklist) -> Unit,
         private val onEvidenciaFotoClick: (ItemChecklist) -> Unit,
+        private val onEliminarFotoClick: (ItemChecklist) -> Unit,
         private val getCantidadMaxima: (ItemChecklist) -> Double
     ) : RecyclerView.ViewHolder(binding.root) {
 
@@ -73,6 +75,20 @@ class ChecklistInspeccionAdapter(
                 // Botón de evidencia fotográfica
                 btnEvidenciaFoto.setOnClickListener {
                     onEvidenciaFotoClick(item)
+                }
+                // Botón de eliminar foto
+                btnEliminarFoto.setOnClickListener {
+                    onEliminarFotoClick(item)
+                }
+
+                // Mostrar la foto si existe
+                if (!item.fotoUri.isNullOrBlank()) {
+                    ivEvidenciaFoto.visibility = View.VISIBLE
+                    btnEliminarFoto.visibility = View.VISIBLE
+                    ivEvidenciaFoto.setImageURI(android.net.Uri.parse(item.fotoUri))
+                } else {
+                    ivEvidenciaFoto.visibility = View.GONE
+                    btnEliminarFoto.visibility = View.GONE
                 }
 
                 // Mostrar input numérico solo si el estado es PASA (CUMPLEN)
