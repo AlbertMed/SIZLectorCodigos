@@ -13,6 +13,7 @@
         android:orientation="vertical"
         android:padding="16dp">
 
+        <!-- Nombre del rubro -->
         <TextView
             android:id="@+id/tvNombreItem"
             android:layout_width="match_parent"
@@ -21,62 +22,87 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
+        <!-- Botones de estado -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center">
 
             <Button
-                android:id="@+id/btnPasa"
+                android:id="@+id/btnCumplen"
                 style="@style/Widget.Material3.Button.OutlinedButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
                 android:layout_weight="1"
-                android:text="@string/pasa"
-                android:textColor="@color/button_state_selector"
+                android:text="Cumplen"
+                android:drawableStart="@drawable/ic_check"
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/btnNoPasa"
+                android:id="@+id/btnNoCumple"
                 style="@style/Widget.Material3.Button.OutlinedButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:layout_weight="1"
-                android:text="@string/no_pasa"
-                android:textColor="@color/button_state_selector"
-                android:textSize="12sp" />
+                android:text="No cumple"
+                android:drawableStart="@drawable/ic_close"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/btnNoAplica"
                 style="@style/Widget.Material3.Button.OutlinedButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
                 android:layout_weight="1"
-                android:text="@string/no_aplica"
-                android:textColor="@color/button_state_selector"
+                android:text="No aplica"
+                android:drawableStart="@drawable/ic_remove_circle"
                 android:textSize="12sp" />
-
         </LinearLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
+        <!-- Fila de input cantidad + iconos -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="@string/observacion">
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="8dp">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etObservacion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textMultiLine"
-                android:maxLines="3" />
+            <EditText
+                android:id="@+id/etCantidad"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="2"
+                android:hint="Cantidad"
+                android:inputType="numberDecimal"
+                android:visibility="gone"
+                android:background="@android:drawable/edit_text"
+                android:padding="8dp"
+                android:textSize="14sp" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+            <ImageButton
+                android:id="@+id/btnNotaVoz"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_mic"
+                android:contentDescription="Nota de voz"
+                android:tint="@color/black"
+                android:layout_marginStart="8dp" />
+
+            <ImageButton
+                android:id="@+id/btnEvidenciaFoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_camera"
+                android:contentDescription="Evidencia fotográfica"
+                android:tint="@color/black"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
 
     </LinearLayout>
 

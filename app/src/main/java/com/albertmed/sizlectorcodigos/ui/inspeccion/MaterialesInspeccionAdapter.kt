@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.albertmed.sizlectorcodigos.data.model.MaterialInspeccion
 import com.albertmed.sizlectorcodigos.databinding.ItemMaterialInspeccionBinding
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 
 class MaterialesInspeccionAdapter(
     private val onMaterialClick: (MaterialInspeccion) -> Unit
@@ -33,10 +35,16 @@ class MaterialesInspeccionAdapter(
                 tvDescripcion.text = material.descripcion
                 tvUdm.text = "UDM: ${material.udm}"
                 tvCantidad.text = "Cantidad: ${material.cantidad}"
-                
+                // tvXPaq.text = "X_Paquete: ${material.xPaq}"
                 
                 root.setOnClickListener {
-                    onMaterialClick(material)
+                    // Navegar al fragmento de inspección del material pasando la cantidad
+                    val action = MaterialesInspeccionFragmentDirections.actionMaterialesInspeccionFragmentToInspeccionMaterialFragment(
+                        material.descripcion,
+                        material.proveedor,
+                        material.cantidad // <-- pasa la cantidad como string
+                    )
+                    it.findNavController().navigate(action)
                 }
             }
         }

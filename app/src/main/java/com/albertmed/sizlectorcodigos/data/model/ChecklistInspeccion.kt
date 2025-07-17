@@ -10,7 +10,8 @@ data class ItemChecklist(
     val id: String,
     val nombre: String,
     var estado: EstadoInspeccion = EstadoInspeccion.NO_APLICA,
-    var observacion: String = ""
+    var observacion: String = "",
+    val cantidadMaxima: Double = 0.0
 )
 
 data class InspeccionMaterial(

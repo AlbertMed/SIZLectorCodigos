@@ -57,6 +57,9 @@
         <argument
             android:name="proveedor"
             app:argType="string" />
+        <argument
+            android:name="cantidadMaterial"
+            app:argType="string" />
     </fragment>
 
     <fragment

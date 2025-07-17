@@ -45,7 +45,8 @@ class MaterialesInspeccionFragment : Fragment() {
             // Navegar al fragmento de inspección del material
             val action = MaterialesInspeccionFragmentDirections.actionMaterialesInspeccionFragmentToInspeccionMaterialFragment(
                 material.descripcion,
-                material.proveedor
+                material.proveedor,
+                material.cantidad
             )
             findNavController().navigate(action)
         }

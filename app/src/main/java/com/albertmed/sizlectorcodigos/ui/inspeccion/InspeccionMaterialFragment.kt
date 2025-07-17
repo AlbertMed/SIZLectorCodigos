@@ -42,29 +42,43 @@ class InspeccionMaterialFragment : Fragment() {
         binding.apply {
             tvDescripcionMaterial.text = args.descripcionMaterial
             tvProveedor.text = "Proveedor: ${args.proveedor}"
+            tvCantidad.text = "Cantidad: ${args.cantidadMaterial}"
         }
     }
     
     private fun setupRecyclerView() {
+        val arguments = arguments
+        arguments.toString()
+
+        val cantidadMaterial = arguments?.getString("cantidadMaterial")?.toDoubleOrNull() ?: 0.0
         val checklistItems = listOf(
-            ItemChecklist("1", "Dimensiones"),
-            ItemChecklist("2", "Acabado"),
-            ItemChecklist("3", "Espesor"),
-            ItemChecklist("4", "Densidad"),
-            ItemChecklist("5", "Elasticidad"),
-            ItemChecklist("6", "Adherencia"),
-            ItemChecklist("7", "Resistencia"),
-            ItemChecklist("8", "Gramage"),
-            ItemChecklist("9", "Templado"),
-            ItemChecklist("10", "Grietas"),
-            ItemChecklist("11", "Humedad"),
-            ItemChecklist("12", "Detalles visuales"),
-            ItemChecklist("13", "Funcionalidad")
+            ItemChecklist("1", "Dimensiones", cantidadMaxima = cantidadMaterial),
+            ItemChecklist("2", "Acabado", cantidadMaxima = cantidadMaterial),
+            ItemChecklist("3", "Espesor", cantidadMaxima = cantidadMaterial),
+            ItemChecklist("4", "Densidad", cantidadMaxima = cantidadMaterial),
+            ItemChecklist("5", "Elasticidad", cantidadMaxima = cantidadMaterial),
+            ItemChecklist("6", "Adherencia", cantidadMaxima = cantidadMaterial),
+            ItemChecklist("7", "Resistencia", cantidadMaxima = cantidadMaterial),
+            ItemChecklist("8", "Gramage", cantidadMaxima = cantidadMaterial),
+            ItemChecklist("9", "Templado", cantidadMaxima = cantidadMaterial),
+            ItemChecklist("10", "Grietas", cantidadMaxima = cantidadMaterial),
+            ItemChecklist("11", "Humedad", cantidadMaxima = cantidadMaterial),
+            ItemChecklist("12", "Detalles visuales", cantidadMaxima = cantidadMaterial),
+            ItemChecklist("13", "Funcionalidad", cantidadMaxima = cantidadMaterial)
         )
         
-        checklistAdapter = ChecklistInspeccionAdapter { item, estado ->
-            item.estado = estado
-        }
+        checklistAdapter = ChecklistInspeccionAdapter(
+            onEstadoChanged = { item, estado ->
+                item.estado = estado
+            },
+            onNotaVozClick = { item ->
+                // TODO: lógica para grabar nota de voz para este rubro
+            },
+            onEvidenciaFotoClick = { item ->
+                // TODO: lógica para tomar foto para este rubro
+            },
+            getCantidadMaxima = { it.cantidadMaxima }
+        )
         
         binding.recyclerViewChecklist.apply {
             layoutManager = LinearLayoutManager(context)
