@@ -1,0 +1,186 @@
+[
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/drawable_ic_camera.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/drawable/ic_camera.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/layout_fragment_nueva_inspeccion.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/fragment_nueva_inspeccion.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/layout_item_checklist_inspeccion.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/item_checklist_inspeccion.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/color_button_state_selector.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/color/button_state_selector.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/xml_data_extraction_rules.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/layout_item_material_inspeccion.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/item_material_inspeccion.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/xml_file_paths.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/xml/file_paths.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/drawable_ic_home.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/drawable/ic_home.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/navigation_nav_graph.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/drawable_ic_mic.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/drawable/ic_mic.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/layout_fragment_scanner.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/fragment_scanner.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/layout_fragment_second.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/fragment_second.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/drawable_ic_check.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/drawable/ic_check.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/drawable_ic_logo.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/drawable/ic_logo.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/drawable_ic_inspection.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/drawable/ic_inspection.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/layout_fragment_login.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/fragment_login.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/drawable_ic_login.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/drawable/ic_login.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/drawable_ic_close.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/drawable/ic_close.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/layout_fragment_materiales_inspeccion.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/fragment_materiales_inspeccion.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/drawable_ic_logout.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/drawable/ic_logout.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/menu_drawer_menu.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/menu/drawer_menu.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/drawable_ic_scanner.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/drawable/ic_scanner.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/layout_fragment_home.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/layout_nav_header_main.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/nav_header_main.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/layout_item_scan.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/item_scan.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/drawable_ic_remove_circle.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/drawable/ic_remove_circle.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/layout_content_main.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/content_main.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/layout_activity_main.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/xml_backup_rules.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/layout_fragment_scan_result.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/fragment_scan_result.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/menu_menu_main.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/menu/menu_main.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-debug-58:/layout_fragment_inspeccion_material.xml.flat",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/fragment_inspeccion_material.xml"
+    }
+]

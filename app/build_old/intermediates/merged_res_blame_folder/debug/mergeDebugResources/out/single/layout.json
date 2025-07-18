@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-mergeDebugResources-57:/layout/fragment_scan_result.xml",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/fragment_scan_result.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-mergeDebugResources-57:/layout/fragment_nueva_inspeccion.xml",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/fragment_nueva_inspeccion.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-mergeDebugResources-57:/layout/fragment_home.xml",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-mergeDebugResources-57:/layout/content_main.xml",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/content_main.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-mergeDebugResources-57:/layout/fragment_materiales_inspeccion.xml",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/fragment_materiales_inspeccion.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-mergeDebugResources-57:/layout/fragment_second.xml",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/fragment_second.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-mergeDebugResources-57:/layout/item_checklist_inspeccion.xml",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/item_checklist_inspeccion.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-mergeDebugResources-57:/layout/fragment_login.xml",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/fragment_login.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-mergeDebugResources-57:/layout/item_material_inspeccion.xml",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/item_material_inspeccion.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-mergeDebugResources-57:/layout/activity_main.xml",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-mergeDebugResources-57:/layout/nav_header_main.xml",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/nav_header_main.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-mergeDebugResources-57:/layout/fragment_scanner.xml",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/fragment_scanner.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-mergeDebugResources-57:/layout/item_scan.xml",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/item_scan.xml"
+    },
+    {
+        "merged": "com.albertmed.sizlectorcodigos.app-mergeDebugResources-57:/layout/fragment_inspeccion_material.xml",
+        "source": "com.albertmed.sizlectorcodigos.app-main-60:/layout/fragment_inspeccion_material.xml"
+    }
+]

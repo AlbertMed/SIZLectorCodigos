@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Nombre del rubro -->
+        <TextView
+            android:id="@+id/tvNombreItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre del item"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Botones de estado -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnCumplen"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cumplen"
+                android:drawableStart="@drawable/ic_check"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnNoCumple"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No cumple"
+                android:drawableStart="@drawable/ic_close"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnNoAplica"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No aplica"
+                android:drawableStart="@drawable/ic_remove_circle"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Fila de input cantidad + iconos -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/etCantidad"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="2"
+                android:hint="Cantidad"
+                android:inputType="numberDecimal"
+                android:visibility="gone"
+                android:background="@android:drawable/edit_text"
+                android:padding="8dp"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/btnNotaVoz"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_mic"
+                android:contentDescription="Nota de voz"
+                android:tint="@color/colorPrimary"
+                android:layout_marginStart="8dp" />
+
+            <ImageButton
+                android:id="@+id/btnEvidenciaFoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_camera"
+                android:contentDescription="Evidencia fotográfica"
+                android:tint="@color/colorPrimary"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Evidencia fotográfica -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/ivEvidenciaFoto"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                android:contentDescription="Foto de evidencia" />
+
+            <ImageButton
+                android:id="@+id/btnEliminarFoto"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_close"
+                android:tint="@android:color/white"
+                android:layout_gravity="top|end"
+                android:visibility="gone"
+                android:contentDescription="Eliminar foto" />
+
+            <ProgressBar
+                android:id="@+id/progressFoto"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView> 

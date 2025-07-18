@@ -1,5 +1,6 @@
 package com.albertmed.sizlectorcodigos.ui.inspeccion
 
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,10 @@ import com.albertmed.sizlectorcodigos.R
 import com.albertmed.sizlectorcodigos.data.model.EstadoInspeccion
 import com.albertmed.sizlectorcodigos.data.model.ItemChecklist
 import com.albertmed.sizlectorcodigos.databinding.FragmentInspeccionMaterialBinding
+import android.os.Environment
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.FileProvider
+import java.io.File
 
 class InspeccionMaterialFragment : Fragment() {
 
@@ -21,6 +26,22 @@ class InspeccionMaterialFragment : Fragment() {
     
     private val args: InspeccionMaterialFragmentArgs by navArgs()
     private lateinit var checklistAdapter: ChecklistInspeccionAdapter
+    private var currentFotoChecklistIndex: Int? = null
+    private var currentFotoUri: Uri? = null
+
+    private val takePictureLauncher = registerForActivityResult(ActivityResultContracts.TakePicture()) { success ->
+        android.util.Log.d("ChecklistAdapter", "takePictureLauncher: success=$success, currentFotoChecklistIndex=$currentFotoChecklistIndex, currentFotoUri=$currentFotoUri")
+        if (currentFotoChecklistIndex != null) {
+            val items = checklistAdapter.currentList.toMutableList()
+            val idx = currentFotoChecklistIndex!!
+            val oldItem = items[idx]
+            items[idx] = oldItem.copy(
+                cargandoFoto = false,
+                fotoUri = if (success && currentFotoUri != null) currentFotoUri.toString() else oldItem.fotoUri
+            )
+            checklistAdapter.submitList(items.toList())
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -75,8 +96,13 @@ class InspeccionMaterialFragment : Fragment() {
                 // TODO: lógica para grabar nota de voz para este rubro
             },
             onEvidenciaFotoClick = { item ->
-                // TODO: lógica para tomar foto para este rubro
-                // Aquí deberías lanzar la intención de cámara y guardar la foto en item.fotoUri
+                val index = checklistAdapter.currentList.indexOf(item)
+                if (index != -1) {
+                    val items = checklistAdapter.currentList.toMutableList()
+                    items[index].cargandoFoto = true
+                    checklistAdapter.submitList(items.toList())
+                    launchCameraForChecklistItem(index)
+                }
             },
             onEliminarFotoClick = { item ->
                 item.fotoUri = null
@@ -91,6 +117,19 @@ class InspeccionMaterialFragment : Fragment() {
         }
         
         checklistAdapter.submitList(checklistItems)
+    }
+
+    private fun launchCameraForChecklistItem(index: Int) {
+        val context = requireContext()
+        val file = File.createTempFile("evidencia_${System.currentTimeMillis()}", ".jpg", context.cacheDir)
+        val uri = FileProvider.getUriForFile(
+            context,
+            "${context.packageName}.provider",
+            file
+        )
+        currentFotoChecklistIndex = index
+        currentFotoUri = uri
+        takePictureLauncher.launch(uri)
     }
     
     private fun setupButtons() {
